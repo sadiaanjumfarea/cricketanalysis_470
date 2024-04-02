@@ -1,0 +1,38 @@
+body {
+    border: 1.5px solid;
+    background-image: url('/images/std.webp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}.container {
+    background-color: transparent; 
+    padding: 20px; 
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333; }
+
+.btn-primary {
+    background-color: #7a51b2; 
+    border-color: #7a51b2; 
+    font-weight: bold; 
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #e6e6ff; 
+    border-color: #e6e6ff; 
+    color: #333; 
+    font-weight: bold; 
+}

@@ -1,0 +1,40 @@
+.container {
+    background-color: #e6e6ff; 
+    padding: 20px; }
+.table {
+        background-color:#e6e6ff ; 
+        border: 1px solid #ccc; 
+    }
+.table th {
+    color: #333; 
+}
+
+.table td {
+    color: #555; 
+}
+.table tr{
+    color: #c8cff0; 
+}
+
+ul {
+    list-style: none; 
+    margin: 0;
+    padding-left: 0; 
+}
+
+ul li {
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+.btn-primary {
+    background-color: #ac9bc4; 
+    border-color: #7a51b2; 
+    font-weight: bold; 
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    color: #c3aacf;
+}
