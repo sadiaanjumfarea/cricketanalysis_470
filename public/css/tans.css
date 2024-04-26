@@ -1,0 +1,53 @@
+body {
+    border: 1.5px solid;
+    background-image: url('/images/std.webp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.table {
+    background-color: transparent; /* Light purple color */
+    border: 1px solid #ccc; /* Add a border for contrast */
+}
+
+
+.table tbody td {
+    background-color: rgba(224, 215, 238, 0.9); 
+    color: #333; /* Text color for table data */
+}
+
+.table thead th {
+    background-color: #462574; 
+    color: #b5a5d7; 
+}
+
+.table tbody tr:hover {
+    background-color: #6a5890;
+}
+.btn-primary {
+    background-color: transparent;
+    border-color: #7a51b2; 
+    font-weight: bold; 
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    color: #fff;
+    font-weight: bold; 
+}
+
+.dropdown-item {
+    color: #333; 
+    background-color: #e6e6ff;
+    font-weight: bold; 
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #333;
+    background-color: #d0d0ff; 
+    font-weight: bold; 
+}
