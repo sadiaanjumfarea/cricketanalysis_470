@@ -85,8 +85,29 @@ Route::get('/items-for-sale', [AccessoriesController::class, 'showItemsForSale']
 
 
 
+
+
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
 Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
-Route::get('/cricket_blogs', [BlogController::class, 'index'])->name('cricket.blogs');
+Route::get('/cricket_blogs', [BlogController::class, 'cricketBlogs']);
+
+
+Route::post('/save-blog', [BlogController::class, 'saveBlog'])->name('save.blog');
+Route::get('/blog-form', function () {
+    return view('blog-form');
+});
+
+Route::get('/blogread', [BlogController::class, 'blogRead'])->name('blog.read');
+
+
+
+Route::get('/quiz', 'QuizController@showQuiz')->name('quiz');
+Route::post('/quiz/submit', 'QuizController@submitQuiz')->name('quiz.submit');
+
+Route::get('/quiz/result', function () {
+    return view('quiz_result');
+})->name('quiz.result');
+

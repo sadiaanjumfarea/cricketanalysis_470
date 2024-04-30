@@ -1,3 +1,8 @@
+
+    
+
+
+
 @extends('layout')
 @section('title', 'Create Team')
 @section('content')
@@ -25,7 +30,7 @@
 
         <div class="mb-3">
             <label for="cricketers" class="form-label">Select 5 Cricketers</label>
-            <select name="cricketers[]" id="cricketers" class="form-control" multiple required>
+            <select name="cricketers[]" id="cricketers" multiple required>
                 @foreach ($cricketers as $cricketer)
                     <option value="{{ $cricketer->id }}">{{ $cricketer->name }}</option>
                 @endforeach
@@ -34,9 +39,10 @@
 
         <button type="submit" class="btn btn-primary">Create Team</button>
     </form>
-
+</form>
     <div class="mt-4">
         <a href="{{ route('team.list') }}" class="btn btn-secondary">See Other Teams</a>
     </div>
 </div>
 @endsection
+

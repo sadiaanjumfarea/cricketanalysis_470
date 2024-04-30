@@ -32,34 +32,85 @@ class CricketerController extends Controller{
     {
         $stadiums = [
             [
-                'name' => 'Stadium 1',
-                'location' => 'Location 1',
-                'capacity' => 'Capacity 1',
-                'facilities' => 'Facilities 1',
+                'name' => 'Melbourne Cricket Ground (MCG)',
+                'location' => 'Melbourne, Australia',
+                'capacity' => '100,024',
+                'ticket_price' => '$50 - $200',
+                'image' => '1.jpg',
             ],
             [
-                'name' => 'Stadium 2',
-                'location' => 'Location 2',
-                'capacity' => 'Capacity 2',
-                'facilities' => 'Facilities 2',
+                'name' => 'Eden Gardens',
+                'location' => 'Kolkata, India',
+                'capacity' => '66,349',
+                'ticket_price' => 'INR 500 - INR 5000',
+                'image' => '2.jpg',
             ],
-            // Add more stadiums as needed
+            [
+                'name' => 'Lord\'s Cricket Ground',
+                'location' => 'London, England',
+                'capacity' => '30,000',
+                'ticket_price' => '£20 - £150',
+                'image' => '3.jpg',
+            ],
+            [
+                'name' => 'Sydney Cricket Ground (SCG)',
+                'location' => 'Sydney, Australia',
+                'capacity' => '48,000',
+                'ticket_price' => '$40 - $180',
+                'image' => '4.jpg',
+            ],
+            [
+                'name' => 'Wankhede Stadium',
+                'location' => 'Mumbai, India',
+                'capacity' => '33,108',
+                'ticket_price' => 'INR 800 - INR 8000',
+                'image' => '5.jpg',
+            ],
+            [
+                'name' => 'Adelaide Oval',
+                'location' => 'Adelaide, Australia',
+                'capacity' => '53,583',
+                'ticket_price' => '$45 - $190',
+                'image' => '6.jpg',
+            ],
+            [
+                'name' => 'The Oval',
+                'location' => 'London, England',
+                'capacity' => '25,500',
+                'ticket_price' => '£15 - £120',
+                'image' => '7.jpg',
+            ],
+            [
+                'name' => 'M. Chinnaswamy Stadium',
+                'location' => 'Bengaluru, India',
+                'capacity' => '40,000',
+                'ticket_price' => 'INR 400 - INR 5000',
+                'image' => '8.jpg',
+            ],
+            [
+                'name' => 'Newlands Cricket Ground',
+                'location' => 'Cape Town, South Africa',
+                'capacity' => '25,000',
+                'ticket_price' => 'R100 - R800',
+                'image' => '9.jpg',
+            ],
+            [
+                'name' => 'Lahore Gaddafi Stadium',
+                'location' => 'Lahore, Pakistan',
+                'capacity' => '27,000',
+                'ticket_price' => 'PKR 500 - PKR 5000',
+                'image' => '10.png',
+            ],
         ];
-
-        $matches = [
-            [
-                'name' => 'Match 1',
-                'price' => '$50',
-            ],
-            [
-                'name' => 'Match 2',
-                'price' => '$75',
-            ],
-            // Add more matches and prices as needed
-        ];
-
-        return view('all_about_cricket', compact('stadiums', 'matches'));
+    
+        // Assuming $stadiums is already sorted by some criteria to get the top 10
+    
+        $top_10_stadiums = array_slice($stadiums, 0, 10);
+    
+        return view('all_about_cricket', compact('top_10_stadiums'));
     }
+    
+
     
     public function update(Request $request, Cricketer $cricketer)
     {
@@ -88,6 +139,8 @@ public function store(Request $request)
 
     return redirect()->route('admin.dashboard')->with('success', 'Cricketer added successfully!');
 }
+
+
 
 
 

@@ -6,12 +6,11 @@
 <link rel="stylesheet" href="{{ asset('css/tans.css') }}">
 <div class="container">
     <h1 class="mb-4">Dashboard</h1>
-    <div class="row" aling="center">
+    <div class="row" align="center">
         <div class="col-md-12 text-end">
             <a href="{{ route('team.create') }}" class="btn btn-primary">Create Team</a>
-            <a href="{{ route('fantasy') }}" class="btn btn-primary">fantasy Team</a>
+            <a href="{{ route('fantasy') }}" class="btn btn-primary">Fantasy Team</a>
             <a href="{{ route('propose.match.bidding') }}" class="btn btn-primary">Propose Match & Bidding</a>
-
             <a href="{{ route('team.list') }}" class="btn btn-primary">Other Teams</a>
             <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -22,28 +21,32 @@
                     <a class="dropdown-item" href="{{ route('cricketers.by.innings') }}">Cricketer by Innings</a>
                 </div>
             </div>
-            
             <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     See Players
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('cricket.blogs') }}">Cricket Blogs</a>
                     <a class="dropdown-item" href="{{ route('female.players') }}">Female Players</a>
                     <a class="dropdown-item" href="{{ route('male.players') }}">Male Players</a>
                 </div>
             </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Matches
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('match') }}">Current Matches</a>
-                    <a class="dropdown-item" href="{{ route('comingmatch') }}">Upcoming Matches</a>
-                </div>
-            </div>
-            
-            
+            <!-- Moved "Matches" dropdown to align with "All About Cricket" and "Blogs About Cricket" -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Matches
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ route('match') }}">Current Matches</a>
+            <a class="dropdown-item" href="{{ route('comingmatch') }}">Upcoming Matches</a>
+        </div>
+    </div>
+            <!-- End of Matches dropdown -->
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <a href="http://127.0.0.1:8000/all-about-cricket" class="btn btn-primary">All About Cricket</a>
+            <a href="http://127.0.0.1:8000/cricket_blogs" class="btn btn-primary">Blogs About Cricket</a>
         </div>
     </div>
 
@@ -69,11 +72,5 @@
             @endforeach
         </tbody>
     </table>
-    <a href="http://127.0.0.1:8000/all-about-cricket">All About Cricket</a>
-
 </div>
 @endsection
-
-
-
-
